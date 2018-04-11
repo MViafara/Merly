@@ -10,6 +10,11 @@
 
     <title>OPENSHIFT</title>
 
+    <!-- librerias firebase-->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
+
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -85,9 +90,27 @@
     <section id="download" class="download-section content-section text-center">
       <div class="container">
         <div class="col-lg-8 mx-auto">
-          <h2>Download Grayscale</h2>
-          <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-          <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+        
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Digite su Nombre">
+            <span class="help-block"></span></input>
+            </div>
+            
+            <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input id="apellido" class="form-control" type="text" name="apellido" placeholder="Digite su Apellido">
+            <span class="help-block"></span></input>
+            </div>
+
+            <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input id="apellido" class="form-control" type="text" name="apellido" placeholder="Digite su Apellido">
+            <span class="help-block"></span></input>
+            </div>
+            
+            <button type="submit" class="btn btn-success" id="btn">Guardar
+            <span class="glyphicon glyphicon-ok"></span></button>
         </div>
       </div>
     </section>
@@ -111,6 +134,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
+    <script src="app.js"></script> 
 
   </body>
 
