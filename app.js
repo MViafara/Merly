@@ -7,15 +7,28 @@ projectId: "openshisft",
 var db = firebase.firestore();
 
 
-db.collection("users").add({
-    first: "Alan",
-    middle: "Mathison",
-    last: "Turing",
-    born: 1912
+function guardar() {
+
+var nombre = document.getElementById('nombre').value;
+var apellido = document.getElementById('apellido').value;
+var carrera = document.getElementById('carrera').value;   
+var semestre = document.getElementById('semestre').value;  
+
+db.collection("estudiantes").add({
+
+    nombre:   nombre,
+    apellido: apellido,
+    carrera:  carrera,
+    semestre: semestre ,
 })
 .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
+    document.getElementById('nombre').value = '';
+    document.getElementById('apellido').value = '';
+    document.getElementById('carrera').value = '';
+    document.getElementById('semestre').value = '';
 })
 .catch(function(error) {
     console.error("Error adding document: ", error);
 });
+}
