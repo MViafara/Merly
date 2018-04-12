@@ -41,9 +41,6 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#download">CRUD</a>
             </li>
             
@@ -59,7 +56,7 @@
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <h1 class="brand-heading">openshift</h1>
-              <p class="intro-text">Seminario de Actualizacion.
+              <p class="intro-text">Seminario de Actualizacion, Merly Viafara
                 <br></p>
               
             </div>
@@ -69,39 +66,17 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="content-section text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>About Grayscale</h2>
-            <p>Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-              <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-            <p>This theme features stock photos by
-              <a href="http://gratisography.com/">Gratisography</a>
-              along with a custom Google Maps skin courtesy of
-              <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-            <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with SASS and LESS files for easy customization!</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Download Section -->
     <section id="download" class="download-section content-section text-center">
       <div class="container">
         <div class="col-lg-8 mx-auto">
         
-            <h1>Agregar Estudiante</h1>
-            <input type="text" id="nombre" placeholder="Nombre" class="form-control my-3">
-            <input type="text" id="apellido" placeholder="Apellido" class="form-control my-3">
-            <input type="text" id="carrera" placeholder="Carrera" class="form-control my-3">
-            <input type="text" id="semestre" placeholder="Semestre" class="form-control my-3">
-      
-            <button class="btn btn-success" id="boton" onclick="guardar()">Guardar</button>
-            <table class="table my-3" >
-                <thead>
-                    <tr>
-                        
+            <table class="table table-striped my-5" style="background:black"> 
+               <thead>
+               <tr>
+                       <th scope="col">ID</th>
                         <th scope="col">NOMBRE</th>
                         <th scope="col">APELLIDO</th>
                         <th scope="col">CARRERA</th>
@@ -112,11 +87,13 @@
                 </thead>
                 <tbody id="tabla">
         
-        
+
                 </tbody>
             </table>
         </div>
       </div>
+      <a href="insert.php"  class="btn btn-info">Agergar Estudiante 
+
     </section>
 
     

@@ -40,13 +40,13 @@ db.collection("estudiantes").onSnapshot((querySnapshot) => {
         console.log(`${doc.id} => ${doc.data().nombre}`);
         tabla.innerHTML += `
         <tr> 
-        
+        <th scope="row">${doc.id}</th>  
          <td>${doc.data().nombre}</td>  
          <td>${doc.data().apellido}</td>  
          <td>${doc.data().carrera}</td>  
          <td>${doc.data().semestre}</td> 
         <td><button class="btn btn-danger" id="boton" onclick="DELETE('${doc.id}')">DELETE</button></td>
-         <td><button class="btn btn-info" id="boton" onclick="UPDATE('${doc.id}','${doc.data().nombre}','${doc.data().apellido}','${doc.data().carrera}','${doc.data().semestre}')">Update</button></td>
+        <td><button class="btn btn-info" id="boton" onclick="UPDATE('${doc.id}','${doc.data().nombre}','${doc.data().apellido}','${doc.data().carrera}','${doc.data().semestre}')">Update</button></td>
          </tr>
          `
     });
