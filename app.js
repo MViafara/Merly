@@ -46,8 +46,8 @@ db.collection("estudiantes").onSnapshot((querySnapshot) => {
          <td>${doc.data().carrera}</td>  
          <td>${doc.data().semestre}</td> 
         <td><button class="btn btn-danger" id="boton" onclick="DELETE('${doc.id}')">DELETE</button></td>
-        <td><button class="btn btn-info" id="boton" onclick="UPDATE('${doc.id}','${doc.data().nombre}','${doc.data().apellido}','${doc.data().carrera}','${doc.data().semestre}')">Update</button></td>
-         </tr>
+        <td><button class="btn btn-info" id="boton" onclick="UPDATE('${doc.id}','${doc.data().nombre}','${doc.data().apellido}','${doc.data().carrera}','${doc.data().semestre}')">update</button></td>
+     </tr>
          `
     });
 });
@@ -59,24 +59,24 @@ function DELETE(id) {
         console.error("Error removing document: ", error);
     });
 }
+
 function UPDATE(id, nombre, apellido, carrera, semestre) {
     document.getElementById('nombre').value = nombre;
-    document.getElementById('apellido').value  =apellido;
+    document.getElementById('apellido').value = apellido;
     document.getElementById('carrera').value = carrera;
     document.getElementById('semestre').value = semestre;
 
     var boton = document.getElementById('boton');
-    boton.innerHTML = 'update';
+    boton.innerHTML = 'UPDATE';
 
     boton.onclick = function () {
         var washingtonRef = db.collection("estudiantes").doc(id);
 
-        // Set the "capital" field of the city 'DC'
         var nombre = document.getElementById('nombre').value;
         var apellido = document.getElementById('apellido').value;
         var carrera = document.getElementById('carrera').value;
         var semestre = document.getElementById('semestre').value;
-
+        
         return washingtonRef.update({
             nombre:   nombre,
             apellido: apellido,
@@ -92,11 +92,9 @@ function UPDATE(id, nombre, apellido, carrera, semestre) {
                 document.getElementById('semestre').value = '';
             })
             .catch(function (error) {
-                // The document probably doesn't exist.
+               
                 console.error("Error updating document: ", error);
             });
     }
-
-
 
 }
